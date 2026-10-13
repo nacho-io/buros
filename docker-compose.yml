@@ -1,0 +1,17 @@
+services:
+  backend:
+    build:
+      context: .
+    env_file: .env
+    volumes:
+      - ./storage:/app/storage
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ../buros-fe
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

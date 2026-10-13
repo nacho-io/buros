@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+.env
+.git
+.vscode
+.claude
+.fastembed_cache/
+storage/
+README.md
